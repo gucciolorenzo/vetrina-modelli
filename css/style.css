@@ -6,7 +6,6 @@
 }
 
 body {
-    /* Font generico di riserva, quello "bello" lo mettiamo nella hero */
     font-family: sans-serif;
     color: #333;
 }
@@ -16,83 +15,71 @@ body {
     height: 100dvh;
     width: 100%;
     
+    /* SFONDO */
     background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.5)), 
                 url('../assets/home-bg-mobile.jpg');
     background-size: cover;
     background-position: center;
     
-    /* FLEXBOX MAGICO */
+    /* LAYOUT FLEXBOX */
     display: flex;
     flex-direction: column;
     
-    /* Questo spara gli elementi agli opposti estremi */
+    /* Spinge testo in alto e bottone in basso */
     justify-content: space-between; 
     
-    align-items: center;
+    /* Centra orizzontalmente il blocco testo e il bottone */
+    align-items: center; 
     
-    /* GESTIONE SPAZI DAI BORDI */
-    padding-top: 120px;    /* Spinge il testo giù dal bordo alto */
-    padding-bottom: 80px;  /* Spinge il bottone su dal bordo basso */
+    /* Padding ridotti per far stare tutto nello schermo */
+    padding-top: 50px; 
+    padding-bottom: 200px; 
     
+    width: 90%; /* Leggermente più largo per sicurezza */
+    color: #D4AF37; /* Colore Oro (come nell'immagine) */
+    font-family: 'Times New Roman', Times, serif;
+    
+    /* FORZA IL CENTRAGGIO DEL TESTO */
     text-align: center;
 }
 
-/* STILE TESTO E COLORI */
+/* STILE BLOCCO TESTO */
 .hero-content {
-    width: 85%;
     
-    /* --- QUI CAMBI IL COLORE DEL TESTO --- */
-    /* Usa codici HEX. Esempi: 
-       Bianco: #ffffff 
-       Oro: #D4AF37 
-       Panna: #FFFDD0 
-       Nero: #000000 */
-    color: #D4AF37; 
-
-    /* FONT ROMANICO E SNELLO */
-    font-family: 'Times New Roman', Times, serif; 
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    line-height: 1;
+    /* Font leggermente ridotto per evitare che venga tagliato */
+    font-size: 3rem; 
+    line-height: 1.1;
     margin-bottom: 10px;
-    
-    /* Rende il font più sottile (se il font lo supporta) */
-    font-weight: 300; 
-    
-    letter-spacing: 2px; /* Spazia leggermente le lettere per eleganza */
+    font-weight: 300;
+    letter-spacing: 2px;
     text-transform: uppercase;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-    font-weight: 300; /* Anche questo sottile */
-    font-style: italic; /* Corsivo per eleganza */
+    font-size: 1.3rem;
+    margin-bottom: 0; /* Tolto il margine sotto, non serve più */
+    font-weight: 300;
+    font-style: italic;
 }
 
-/* BOTTONE TRASPARENTE (GHOST BUTTON) */
+/* BOTTONE TRASPARENTE */
 .btn {
-    display: inline-block; /* Si adatta alla larghezza del testo */
+    display: inline-block;
     padding: 15px 40px;
-    
-    /* TRASPARENZA E BORDO */
-    background-color: transparent; /* Sfondo invisibile */
-    
-    /* Prende automaticamente il colore definito in .hero-content (color: #ffffff) */
-    border: 1px solid currentColor; 
-    color: currentColor; 
-    
+    background-color: transparent;
+    border: 1px solid currentColor;
+    color: currentColor;
     text-decoration: none;
-    font-family: inherit; /* Usa lo stesso font (Times) */
+    font-family: inherit;
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: all 0.3s ease;
 }
 
-/* Effetto quando tocchi il bottone */
 .btn:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Leggero alone bianco */
+    background-color: rgba(212, 175, 55, 0.1); /* Alone dorato leggero */
 }
