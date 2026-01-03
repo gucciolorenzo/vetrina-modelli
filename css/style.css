@@ -168,3 +168,85 @@ body {
 .product-card .btn-shop:hover {
     background-color: rgba(212, 175, 55, 0.1); /* Alone dorato */
 }
+
+/* --- MENU LATERALE (HAMBURGER) --- */
+
+/* 1. Stile delle tre righette */
+.menu-icon {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 20px; /* Grandezza icone */
+    color: #D4AF37;    /* Colore bianco per vedersi sullo sfondo scuro */
+    cursor: pointer;
+    z-index: 100;    /* Deve stare sopra allo sfondo */
+    transition: color 0.3s;
+}
+
+.menu-icon:hover {
+    color: #D4AF37; /* Diventa oro se ci passi sopra col mouse */
+}
+
+/* 2. La scatola del menu (Nascosta inizialmente) */
+.sidebar {
+    height: 100%;        /* Alto quanto tutto lo schermo */
+    width: 200px;        /* Larghezza del menu */
+    position: fixed;     /* Resta fisso mentre scorri */
+    z-index: 2000;       /* Altissimo livello, sopra a tutto */
+    top: 0;
+    left: -250px;        /* NASCOSTO: spostato fuori schermo a sinistra */
+    background-color: rgba(0, 0, 0, 0.75);
+    overflow-x: hidden;  /* Niente barre di scorrimento orizzontali */
+    transition: 0.4s;    /* Animazione di scivolamento fluida */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3); /* Ombra a destra per profondità */
+}
+
+/* Classe che aggiungeremo col JS per mostrare il menu */
+.sidebar.open {
+    left: 0; /* Lo riporta dentro lo schermo */
+}
+
+/* 3. Contenuto del menu */
+.sidebar-content {
+    padding-top: 60px; /* Spazio per non sovrapporsi alla X */
+    text-align: center;
+}
+
+.sidebar h2 {
+    font-family: 'Times New Roman', serif;
+    color: #D4AF37;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.sidebar .line {
+    width: 40px;
+    height: 2px;
+    background-color: #D4AF37;
+    margin: 0 auto 30px auto;
+}
+
+/* Link dentro il menu */
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    font-size: 1.2rem;
+    color: #d0c190;
+    display: block; /* Ognuno su una riga */
+    font-family: 'Times New Roman', serif;
+    transition: 0.3s;
+
+}
+
+/* Tasto X per chiudere */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    font-size: 36px;
+    margin-left: 0px;
+    color: #D4AF37;
+}
+

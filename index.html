@@ -11,12 +11,16 @@
 <body>
 
     <section id="home" class="hero">
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+
         <div class="hero-content">
             <h1>ANNÌ<br>HANDMADE</h1>
             <p>Unicità fatta a mano.</p>
         </div>
 
-        <a href="#collezione" class="btn">Scopri la Collezione</a>
+        <div class="hero-bottom">
+    <a href="#collezione" class="btn">Scopri la Collezione</a>
+</div>
     </section>
 
     <section id="collezione" class="collection">
@@ -43,6 +47,18 @@
 
         </div>
     </section>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+        
+        <div class="sidebar-content">
+            <h2>CONTATTI</h2>
+            <div class="line"></div> 
+            <a href="https://www.vinted.it/member/212220343" target="_blank">Vinted</a>
+            <a href="https://www.instagram.com/annii.handmade/" target="_blank">Instagram</a>
+            <a href="mailto:anna.caporali@icloud.com">Email</a>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
