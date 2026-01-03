@@ -3,139 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Handmade Bags - Coming Soon</title>
-    <style>
-        /* Stile semplice e pulito */
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #fff;
-            padding: 40px 20px;
-            text-align: center;
-            border-bottom: 1px solid #eee;
-        }
-        h1 { margin: 0; font-size: 2.5rem; color: #222; }
-        p.subtitle { color: #666; font-size: 1.2rem; }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Griglia prodotti */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
-            text-align: center;
-            padding-bottom: 20px;
-        }
-        .card:hover { transform: translateY(-5px); }
-        
-        /* Placeholder per le immagini (grigio finché non metti le foto vere) */
-        .img-placeholder {
-            width: 100%;
-            height: 250px;
-            background-color: #ddd;
-            display: flex;
-            align-items: center;
-            justify_content: center;
-            color: #777;
-            font-weight: bold;
-        }
-        /* Se usi immagini vere, togli la classe placeholder e usa <img> normale */
-        
-        .card h3 { margin: 15px 0 5px; }
-        .price { color: #b12704; font-weight: bold; font-size: 1.1rem; }
-        
-        /* Pulsante WhatsApp */
-        .btn-wa {
-            display: inline-block;
-            background-color: #25D366;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 20px;
-            margin-top: 10px;
-            font-weight: bold;
-        }
-        .btn-wa:hover { background-color: #128C7E; }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            font-size: 0.9rem;
-            color: #888;
-        }
-    </style>
+    
+    <title>Anni Handmade | Portfolio</title>
+    
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header>
-        <h1>Handmade Bags</h1>
-        <p class="subtitle">One of one items, handmade. Official site coming soon.</p>
+        <nav>
+            <div class="logo">Anni Handmade</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Lavori</a></li>
+                <li><a href="#about">Chi Sono</a></li>
+                <li><a href="#contact">Contatti</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="container">
-        
-        <div style="text-align: center; margin-bottom: 40px;">
-            <p>Stiamo allestendo la vetrina online. Nel frattempo, ecco un'anteprima di alcuni modelli.</p>
-        </div>
+    <section id="home">
+        <h1>Benvenuti su Anni Handmade</h1>
+        <p>Creazioni uniche fatte a mano.</p>
+    </section>
 
-        <div class="grid">
-            <div class="card">
-                <div class="img-placeholder">FOTO BORSA 1</div> 
-                
-                <h3>Modello Shopper</h3>
-                <p>Pelle sintetica, capiente e resistente.</p>
-                <p class="price">€ 45,00</p>
-                
-                <a href="https://wa.me/390000000000?text=Ciao, sono interessato alla Shopper" class="btn-wa">Ordina su WhatsApp</a>
-            </div>
-
-            <div class="card">
-                <div class="img-placeholder">FOTO BORSA 2</div>
-                
-                <h3>Modello Tracolla</h3>
-                <p>Compatta, ideale per la sera.</p>
-                <p class="price">€ 30,00</p>
-                
-                <a href="https://wa.me/390000000000?text=Ciao, sono interessato alla Tracolla" class="btn-wa">Ordina su WhatsApp</a>
-            </div>
-
-            <div class="card">
-                <div class="img-placeholder">FOTO BORSA 3</div>
-                
-                <h3>Zainetto Urban</h3>
-                <p>Stile moderno, chiusura zip.</p>
-                <p class="price">€ 55,00</p>
-                
-                <a href="https://wa.me/390000000000?text=Ciao, sono interessato allo Zainetto" class="btn-wa">Ordina su WhatsApp</a>
-            </div>
-        </div>
-
-    </div>
-
-    <footer>
-        &copy; annìhandmade.
-    </footer>
-
+    <script src="js/script.js"></script>
 </body>
 </html>
-
