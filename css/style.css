@@ -1,1 +1,70 @@
-body { background-color: #f0f0f0; font-family: sans-serif; }
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; /* Font nativi del telefono (più veloci) */
+    color: #333;
+    overflow-x: hidden; /* Evita lo scroll laterale accidentale */
+}
+
+/* HERO SECTION VERTICALE */
+.hero {
+    /* Usa 100dvh (Dynamic Viewport Height) invece di vh per gestire la barra degli indirizzi di Safari/Chrome mobile */
+    height: 100dvh;
+    width: 100%;
+    
+    /* Sfondo */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6)), 
+                url('../assets/home-bg-mobile.jpg');
+    background-size: cover;
+    background-position: center;
+    
+    /* Layout Flexbox Verticale */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Spinge tutto il testo in BASSO (più facile da leggere sul telefono) */
+    align-items: center;
+    padding-bottom: 80px; /* Spazio dal fondo per non toccare il bordo */
+    text-align: center;
+}
+
+/* TESTO EMOZIONALE */
+.hero-content {
+    width: 90%; /* Lascia un po' di bordo ai lati */
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem; /* Grande, ma non enorme come su PC */
+    line-height: 1.1;
+    margin-bottom: 15px;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Leggibilità sulla foto */
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* BOTTONE "APP STYLE" */
+.btn {
+    display: block;
+    width: 100%; /* Bottone largo, facile da premere col pollice */
+    padding: 18px 0;
+    background-color: white;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 50px; /* Pillola */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
