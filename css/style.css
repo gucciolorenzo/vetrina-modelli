@@ -80,3 +80,73 @@ body {
 .btn:hover {
     background-color: rgba(212, 175, 55, 0.1); /* Alone dorato leggero */
 }
+
+/* --- SEZIONE COLLEZIONE --- */
+.collection {
+    background-color: #f9f9f9; /* Grigio chiarissimo elegante */
+    padding: 60px 20px;
+    min-height: 100vh;
+}
+
+/* Titolo Sezione */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: #D4AF37; /* Nero morbido */
+}
+
+.section-title .line {
+    width: 60px;
+    height: 2px;
+    background-color: #D4AF37; /* Lo stesso Oro della Hero */
+    margin: 0 auto;
+}
+
+/* Griglia 2 Colonne (Instagram Style) */
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Due colonne identiche */
+    gap: 15px; /* Spazio tra le card */
+}
+
+/* Scheda Prodotto */
+.product-card {
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Ombra leggera */
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.product-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Forza le immagini a essere QUADRATE */
+    object-fit: cover; /* Taglia l'eccedenza senza deformare */
+    display: block;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-family: 'Times New Roman', serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.product-card p {
+    font-family: 'Times New Roman', serif;
+    font-size: 0.6rem;
+    color: #D4AF37; /* Prezzo Oro */
+    font-weight: bold;
+}
