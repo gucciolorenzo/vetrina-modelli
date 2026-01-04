@@ -40,11 +40,6 @@ body {
     text-align: center;
 }
 
-/* STILE BLOCCO TESTO */
-.hero-content {
-    
-}
-
 .hero h1 {
     /* Font leggermente ridotto per evitare che venga tagliato */
     font-size: 3rem; 
