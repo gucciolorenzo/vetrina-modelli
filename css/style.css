@@ -1,16 +1,20 @@
 /* =========================================
    1. VARIABLES & SETUP
-   (Modifica qui i colori per cambiarli in tutto il sito)
+   (Modifica qui Colori e Font per tutto il sito)
    ========================================= */
 :root {
-    /* Il tuo Oro Principale (Standardizzato su quello "Gucci" #D4AF37 ) */
-    --main-gold: #D4AF37; 
+    /* --- COLORI --- */
+    --main-gold: #D4AF37;       /* Oro Principale */
+    --gold-dark: #b5932a;       /* Oro Scuro (Hover) */
+    --text-dark: #333333;       /* Nero Morbido (Testi) */
+    --bg-light:  #f9f9f9;       /* Sfondo chiaro sezioni */
     
-    /* Oro più scuro (per effetti hover) */
-    --gold-dark: #b5932a;
+    /* --- FONT --- */
+    /* Font elegante per Titoli, Brand e Prezzi */
+    --font-serif: 'Times New Roman', Times, serif;
     
-    /* Nero Morbido (per testi) */
-    --text-dark: #333333;
+    /* Font pulito per testi lunghi e descrizioni */
+    --font-sans: sans-serif;
 }
 
 /* RESET */
@@ -21,7 +25,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: var(--font-sans); /* Default: Sans-serif */
     color: var(--text-dark);
 }
 
@@ -43,8 +47,8 @@ body {
     padding-top: 50px; 
     padding-bottom: 120px; 
     
-    color: var(--main-gold); /* USO VARIABILE */
-    font-family: 'Times New Roman', Times, serif;
+    color: var(--main-gold);
+    font-family: var(--font-serif); /* USO VARIABILE FONT */
     text-align: center;
 }
 
@@ -69,10 +73,10 @@ body {
     display: inline-block;
     padding: 15px 40px;
     background-color: transparent;
-    border: 1px solid currentColor; /* Prende il colore del testo (Oro) */
+    border: 1px solid currentColor;
     color: currentColor;
     text-decoration: none;
-    font-family: inherit;
+    font-family: inherit; /* Eredita il font del genitore */
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -80,7 +84,6 @@ body {
 }
 
 .btn:hover {
-    /* NOTA: Qui uso ancora rgba per la trasparenza, basato sul colore oro */
     background-color: rgba(212, 175, 55, 0.1); 
 }
 
@@ -89,13 +92,13 @@ body {
     background-color: #000000;
     padding: 20px 20px;
     text-align: center;
-    border-top: 1px solid var(--main-gold); /* USO VARIABILE */
+    border-top: 1px solid var(--main-gold);
     margin-top: auto;
 }
 
 .site-footer p {
-    font-family: 'Times New Roman', serif;
-    color: var(--main-gold); /* USO VARIABILE */
+    font-family: var(--font-serif); /* USO VARIABILE FONT */
+    color: var(--main-gold);
     font-size: 0.8rem;
     letter-spacing: 1px;
     margin-bottom: 10px;
@@ -103,9 +106,9 @@ body {
 
 .footer-legal {
     font-size: 0.7rem;
-    color: var(--main-gold); /* USO VARIABILE */
+    color: var(--main-gold);
     opacity: 0.7;
-    font-family: 'Times New Roman', serif;
+    font-family: var(--font-serif); /* USO VARIABILE FONT */
 }
 
 .footer-legal a {
@@ -125,7 +128,7 @@ body {
 
 /* --- SEZIONE COLLEZIONE --- */
 .collection {
-    background-color: #f9f9f9;
+    background-color: var(--bg-light);
     padding: 60px 20px;
     min-height: 100vh;
 }
@@ -137,18 +140,18 @@ body {
 }
 
 .section-title h2 {
-    font-family: 'Times New Roman', serif;
+    font-family: var(--font-serif); /* USO VARIABILE FONT */
     font-size: 2rem;
     font-weight: 300;
     letter-spacing: 2px;
     margin-bottom: 15px;
-    color: var(--main-gold); /* USO VARIABILE */
+    color: var(--main-gold);
 }
 
 .section-title .line {
     width: 60px;
     height: 2px;
-    background-color: var(--main-gold); /* USO VARIABILE */
+    background-color: var(--main-gold);
     margin: 0 auto;
 }
 
@@ -179,7 +182,7 @@ body {
 }
 
 .product-card h3 {
-    font-family: 'Times New Roman', serif;
+    font-family: var(--font-serif); /* USO VARIABILE FONT */
     font-size: 0.95rem;
     font-weight: 400;
     margin-bottom: 5px;
@@ -187,9 +190,9 @@ body {
 }
 
 .product-card p {
-    font-family: 'Times New Roman', serif;
+    font-family: var(--font-serif); /* USO VARIABILE FONT */
     font-size: 0.6rem;
-    color: var(--main-gold); /* USO VARIABILE */
+    color: var(--main-gold);
 }
 
 /* Rimuove decorazioni dai link dentro le card */
@@ -205,12 +208,14 @@ body {
 
 /* --- STILE BOTTONE ACQUISTA (SHOP) --- */
 .product-card .btn-shop {
-    color: var(--main-gold); /* USO VARIABILE */
-    border-color: var(--main-gold); /* USO VARIABILE */
+    color: var(--main-gold);
+    border-color: var(--main-gold);
     
     margin-top: 15px;
     padding: 5px 20px;
     font-size: 0.5rem;
+    /* Qui eredita font-family dal genitore o dal body, 
+       se vuoi forzare il serif: font-family: var(--font-serif); */
 }
 
 .product-card .btn-shop:hover {
@@ -223,14 +228,14 @@ body {
     top: 25px;
     left: 25px;
     font-size: 20px;
-    color: var(--main-gold); /* USO VARIABILE */
+    color: var(--main-gold);
     cursor: pointer;
     z-index: 100;
     transition: color 0.3s;
 }
 
 .menu-icon:hover {
-    color: var(--main-gold); /* USO VARIABILE */
+    color: var(--main-gold);
 }
 
 .sidebar {
@@ -256,8 +261,8 @@ body {
 }
 
 .sidebar h2 {
-    font-family: 'Times New Roman', serif;
-    color: var(--main-gold); /* USO VARIABILE */
+    font-family: var(--font-serif); /* USO VARIABILE FONT */
+    color: var(--main-gold);
     font-size: 1.5rem;
     margin-bottom: 10px;
     letter-spacing: 2px;
@@ -266,7 +271,7 @@ body {
 .sidebar .line {
     width: 40px;
     height: 2px;
-    background-color: var(--main-gold); /* USO VARIABILE */
+    background-color: var(--main-gold);
     margin: 0 auto 30px auto;
 }
 
@@ -275,9 +280,9 @@ body {
     text-decoration: underline;
     text-decoration-thickness: 1px;
     font-size: 1rem;
-    color: var(--main-gold); /* USO VARIABILE */
+    color: var(--main-gold);
     display: block;
-    font-family: 'Times New Roman', serif;
+    font-family: var(--font-serif); /* USO VARIABILE FONT */
     transition: 0.3s;
 }
 
@@ -287,7 +292,7 @@ body {
     right: 0px;
     font-size: 36px;
     margin-left: 0px;
-    color: var(--main-gold); /* USO VARIABILE */
+    color: var(--main-gold);
     text-decoration: none;
 }
 
@@ -299,7 +304,7 @@ body {
     width: 25px;
     height: 25px;
     
-    color: var(--main-gold); /* USO VARIABILE */
+    color: var(--main-gold);
     
     z-index: 1000;
     transition: transform 0.3s ease, opacity 0.3s;
@@ -336,10 +341,11 @@ body {
     letter-spacing: 1px;
     margin-bottom: 15px;
     text-transform: uppercase;
+    /* Usa font-sans di default ereditato dal body */
 }
 
 .gucci-title {
-    font-family: 'Times New Roman', serif;
+    font-family: var(--font-serif); /* USO VARIABILE FONT */
     font-size: 2.2rem;
     color: #111;
     margin-bottom: 15px;
@@ -347,24 +353,25 @@ body {
 }
 
 .gucci-price {
+    font-family: var(--font-serif); /* Opzionale, spesso i prezzi sono belli serif */
     font-size: 1.8rem;
-    color: var(--main-gold); /* USO VARIABILE */
+    color: var(--main-gold);
     margin-bottom: 25px;
 }
 
 .gucci-description {
-    font-family: sans-serif;
+    font-family: var(--font-sans); /* USO VARIABILE FONT */
     line-height: 1.6;
     color: #444;
     margin-bottom: 30px;
 }
 
-/* Bottone stile Gucci (Largo e Pieno) */
+/* Bottone stile Gucci */
 .btn-gucci-buy {
     display: block;
     width: 100%;
     text-align: center;
-    background-color: var(--main-gold); /* USO VARIABILE */
+    background-color: var(--main-gold);
     color: white;
     border: none;
     padding: 15px;
@@ -373,10 +380,11 @@ body {
     text-transform: uppercase;
     margin-bottom: 10px;
     transition: background-color 0.3s;
+    /* Eredita sans dal body o forzalo qui */
 }
 
 .btn-gucci-buy:hover {
-    background-color: var(--gold-dark); /* USO VARIABILE (versione scura) */
+    background-color: var(--gold-dark);
     color: white;
 }
 
@@ -398,7 +406,7 @@ body {
 }
 
 .gucci-accordion summary {
-    font-family: sans-serif;
+    font-family: var(--font-sans); /* USO VARIABILE FONT */
     font-weight: bold;
     color: #333;
     cursor: pointer;
@@ -415,7 +423,7 @@ body {
 .gucci-accordion summary::after {
     content: '›';
     font-size: 1.5rem;
-    color: var(--main-gold); /* USO VARIABILE */
+    color: var(--main-gold);
     transition: transform 0.3s;
 }
 
@@ -425,7 +433,7 @@ body {
 
 .accordion-content {
     padding-top: 15px;
-    font-family: sans-serif;
+    font-family: var(--font-sans); /* USO VARIABILE FONT */
     color: #555;
     line-height: 1.6;
     font-size: 0.95rem;
