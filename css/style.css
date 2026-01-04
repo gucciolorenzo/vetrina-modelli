@@ -81,6 +81,45 @@ body {
     background-color: rgba(212, 175, 55, 0.1); /* Alone dorato leggero */
 }
 
+/* --- FOOTER --- */
+.site-footer {
+    background-color: #000000;    /* Nero assoluto */
+    padding: 20px 20px;           /* Spaziatura interna */
+    text-align: center;           /* Testo centrato */
+    border-top: 1px solid #D4AF37; /* Riga dorata di separazione */
+    margin-top: auto;             /* Spinge il footer in fondo se la pagina è corta */
+}
+
+.site-footer p {
+    font-family: 'Times New Roman', serif; /* Stesso font della Hero */
+    color: #D4AF37;               /* Tuo colore Oro */
+    font-size: 0.8rem;            /* Testo piccolo */
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.footer-legal {
+    font-size: 0.7rem;            /* Testo legale ancora più piccolo */
+    color: #D4AF37;
+    opacity: 0.7;                 /* Leggermente più spento per eleganza */
+    font-family: 'Times New Roman', serif;
+}
+
+.footer-legal a {
+    color: inherit;               /* Prende il colore del genitore (Oro spento) */
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.footer-legal a:hover {
+    opacity: 1;                   /* Diventa luminoso al passaggio */
+    text-decoration: underline;
+}
+
+.footer-legal span {
+    margin: 0 5px;                /* Spazio attorno alla stanghetta separatrice */
+}
+
 /* --- SEZIONE COLLEZIONE --- */
 .collection {
     background-color: #f9f9f9; /* Grigio chiarissimo elegante */
@@ -150,7 +189,15 @@ body {
     color: #d3b245; /* Prezzo Oro */
 
 }
+
+/* Rimuove decorazioni dai link dentro le card */
+.product-card .product-link {
+    text-decoration: none;
+    color: inherit; /* Mantiene i colori originali */
+    display: block; /* Rende cliccabile tutta l'area dell'immagine */
+}
 /* --- STILE BOTTONE ACQUISTA (SHOP) --- */
+
 .product-card .btn-shop {
     /* Forza il colore Oro, dato che siamo dentro una scheda bianca */
     color: #d3b245;
